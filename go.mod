@@ -1,4 +1,4 @@
-module go-gin
+module github.com/xweis/go-gin
 
 go 1.22.1
 
