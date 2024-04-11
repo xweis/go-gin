@@ -4,14 +4,14 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/swaggo/files"       // swagger embed files
 	"github.com/swaggo/gin-swagger" // gin-swagger middleware
-	"go-gin/docs"
-	"go-gin/middleware/cors"
-	"go-gin/middleware/ginLog"
-	"go-gin/middleware/jwt"
-	"go-gin/middleware/recovery"
-	"go-gin/middleware/traceId"
-	"go-gin/pkg/setting"
-	v1 "go-gin/routers/api/v1"
+	"github.com/xweis/go-gin/docs"
+	"github.com/xweis/go-gin/middleware/cors"
+	"github.com/xweis/go-gin/middleware/ginLog"
+	"github.com/xweis/go-gin/middleware/jwt"
+	"github.com/xweis/go-gin/middleware/recovery"
+	"github.com/xweis/go-gin/middleware/traceId"
+	"github.com/xweis/go-gin/pkg/setting"
+	v1 "github.com/xweis/go-gin/routers/api/v1"
 )
 
 // InitRouter initialize routing information

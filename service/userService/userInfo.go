@@ -2,10 +2,10 @@ package userService
 
 import (
 	"errors"
-	"go-gin/models"
-	"go-gin/pkg/logging"
-	"go-gin/pkg/util/aes"
-	"go-gin/pkg/util/jwt"
+	"github.com/xweis/go-gin/models"
+	"github.com/xweis/go-gin/pkg/logging"
+	"github.com/xweis/go-gin/pkg/util/aes"
+	"github.com/xweis/go-gin/pkg/util/jwt"
 )
 
 type User struct {

@@ -6,7 +6,7 @@ import (
 	"crypto/cipher"
 	"encoding/base64"
 	"errors"
-	"go-gin/pkg/setting"
+	"github.com/xweis/go-gin/pkg/setting"
 )
 
 //加密过程：

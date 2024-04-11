@@ -4,7 +4,7 @@ import (
 	"errors"
 	"github.com/gin-gonic/gin"
 	val "github.com/go-playground/validator/v10"
-	"go-gin/pkg/translations"
+	"github.com/xweis/go-gin/pkg/translations"
 	"strings"
 )
 

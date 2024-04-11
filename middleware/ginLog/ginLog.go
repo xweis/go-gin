@@ -3,7 +3,7 @@ package ginLog
 import (
 	"bytes"
 	"github.com/gin-gonic/gin"
-	"go-gin/pkg/logging"
+	"github.com/xweis/go-gin/pkg/logging"
 	"io"
 	"strings"
 	"time"

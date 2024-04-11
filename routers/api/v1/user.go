@@ -2,10 +2,10 @@ package v1
 
 import (
 	"github.com/gin-gonic/gin"
-	"go-gin/pkg/app"
-	"go-gin/pkg/e"
-	"go-gin/pkg/logging"
-	"go-gin/service/userService"
+	"github.com/xweis/go-gin/pkg/app"
+	"github.com/xweis/go-gin/pkg/e"
+	"github.com/xweis/go-gin/pkg/logging"
+	"github.com/xweis/go-gin/service/userService"
 )
 
 type LoginInput struct {

@@ -3,8 +3,8 @@ package jwt
 import (
 	"errors"
 	"github.com/golang-jwt/jwt/v4"
-	"go-gin/pkg/setting"
-	"go-gin/pkg/util/aes"
+	"github.com/xweis/go-gin/pkg/setting"
+	"github.com/xweis/go-gin/pkg/util/aes"
 	"time"
 )
 

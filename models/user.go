@@ -4,7 +4,7 @@ import (
 	"errors"
 	"github.com/google/uuid"
 	"github.com/jinzhu/gorm"
-	"go-gin/pkg/logging"
+	"github.com/xweis/go-gin/pkg/logging"
 	"regexp"
 )
 

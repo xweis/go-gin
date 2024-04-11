@@ -2,10 +2,10 @@ package jwt
 
 import (
 	"github.com/gin-gonic/gin"
-	"go-gin/pkg/app"
-	"go-gin/pkg/e"
-	"go-gin/pkg/logging"
-	utilJwt "go-gin/pkg/util/jwt"
+	"github.com/xweis/go-gin/pkg/app"
+	"github.com/xweis/go-gin/pkg/e"
+	"github.com/xweis/go-gin/pkg/logging"
+	utilJwt "github.com/xweis/go-gin/pkg/util/jwt"
 	"net/http"
 	"strings"
 )

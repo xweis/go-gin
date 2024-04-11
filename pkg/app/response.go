@@ -2,8 +2,8 @@ package app
 
 import (
 	"github.com/gin-gonic/gin"
-	"go-gin/pkg/convertor"
-	"go-gin/pkg/e"
+	"github.com/xweis/go-gin/pkg/convertor"
+	"github.com/xweis/go-gin/pkg/e"
 	"net/http"
 )
 
