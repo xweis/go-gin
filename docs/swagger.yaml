@@ -1,0 +1,99 @@
+definitions:
+  v1.AddUserInput:
+    properties:
+      email:
+        type: string
+      password:
+        maxLength: 30
+        minLength: 6
+        type: string
+      rePassword:
+        maxLength: 30
+        minLength: 6
+        type: string
+    required:
+    - email
+    - password
+    - rePassword
+    type: object
+  v1.LoginInput:
+    properties:
+      email:
+        type: string
+      password:
+        maxLength: 30
+        minLength: 6
+        type: string
+    required:
+    - email
+    - password
+    type: object
+info:
+  contact: {}
+  description: go-gin
+  title: Golang Gin API
+  version: "1.0"
+paths:
+  /add_user:
+    post:
+      consumes:
+      - application/json
+      description: 添加用户
+      parameters:
+      - description: user obj
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/v1.AddUserInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      summary: 添加用户
+      tags:
+      - user
+  /get_user:
+    get:
+      consumes:
+      - application/json
+      description: 用户
+      parameters:
+      - default: Bearer <Add access token here>
+        description: Insert your access token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - Bearer 123456: []
+      summary: 获取用户信息
+      tags:
+      - user
+  /login:
+    post:
+      consumes:
+      - application/json
+      description: 用户
+      parameters:
+      - description: GetUserInput
+        in: body
+        name: loginInput
+        required: true
+        schema:
+          $ref: '#/definitions/v1.LoginInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      summary: 用户登录
+      tags:
+      - user
+swagger: "2.0"
