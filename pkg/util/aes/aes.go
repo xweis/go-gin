@@ -38,8 +38,8 @@ func pkcs7UnPadding(data []byte) ([]byte, error) {
 	return data[:(length - unPadding)], nil
 }
 
-// Encrypt 加密
-func Encrypt(data []byte, key []byte) ([]byte, error) {
+// encrypt 加密
+func encrypt(data []byte, key []byte) ([]byte, error) {
 	//创建加密实例
 	block, err := aes.NewCipher(key)
 	if err != nil {
@@ -58,8 +58,8 @@ func Encrypt(data []byte, key []byte) ([]byte, error) {
 	return crypted, nil
 }
 
-// Decrypt 解密
-func Decrypt(data []byte, key []byte) ([]byte, error) {
+// decrypt 解密
+func decrypt(data []byte, key []byte) ([]byte, error) {
 	//创建实例
 	block, err := aes.NewCipher(key)
 	if err != nil {
@@ -83,7 +83,7 @@ func Decrypt(data []byte, key []byte) ([]byte, error) {
 
 // EncryptByAes Aes加密 后 base64 再加
 func EncryptByAes(data []byte) (string, error) {
-	res, err := Encrypt(data, []byte(setting.AppSetting.AesKey))
+	res, err := encrypt(data, []byte(setting.AppSetting.AesKey))
 	if err != nil {
 		return "", err
 	}
@@ -96,5 +96,5 @@ func DecryptByAes(data string) ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
-	return Decrypt(dataByte, []byte(setting.AppSetting.AesKey))
+	return decrypt(dataByte, []byte(setting.AppSetting.AesKey))
 }
